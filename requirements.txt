@@ -1,0 +1,6 @@
+jupyter
+numpy
+matplotlib
+PyQt5
+pyqtgraph
+multiprocess
