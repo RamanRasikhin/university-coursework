@@ -15,4 +15,4 @@ cmake --build build
 
 Run the produced `library_management` executable (Windows: `library_management.exe`; some CMake generators place it under `build/Debug`). CSV paths are relative to the working directory. Registration creates local demonstration accounts; use synthetic data.
 
-The source was compiled with MinGW GCC 13.1 and a startup/menu/exit smoke check passed. Full lending and reservation workflows have not been tested. Password handling is educational and unsuitable for a real service.
+The source was compiled with MinGW GCC 13.1 and a startup/menu/exit smoke check passed. Full lending and reservation workflows have not been tested. The two `Czytelnik::wyszukajKsiazke` overloads remain placeholders that print the query. Password handling is educational and unsuitable for a real service.
