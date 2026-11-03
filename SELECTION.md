@@ -1,6 +1,6 @@
 # Selection and source provenance
 
-This selection was expanded after a second review of 797 extracted text/source files. Some names in the RAR are unreadable with the available extractor, so it is not a complete inventory of every archived byte.
+Source locations and maintenance notes for the selected coursework.
 
 | Published path | Original archive location | Cleanup |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ This selection was expanded after a second review of 797 extracted text/source f
 ## Excluded or deferred
 
 - `python progs/pythonProject1/main.py`: normalized source is identical to [Tiendil's generator.py](https://github.com/Tiendil/tutorial-dungeon-generation/blob/master/generator.py), a BSD-3-Clause tutorial. It should be referenced/forked with attribution if used later, not labelled an independent project.
-- `gry w konsoli/gry_lotropodobne`: its Git origin points to an academic repository under Raman's login, which confirms a storage location rather than original authorship. It shares code with the other C++ game copies, and the user recalls adapting a downloaded game. Exact upstream and personal changes remain unresolved.
+- `gry w konsoli/gry_lotropodobne`: a modified downloaded example with unresolved upstream attribution; excluded from the selection.
 - `C++ progs/vs papka/graX` and similar RPG variants: substantial but incomplete/duplicated; the checked variant does not compile as supplied. They are candidates for restoration, not ready showcase applications.
 - `Modelowanie.ipynb` Ising and Penna sections: assignment prompts without completed implementation; omitted from the featured notebook.
 - Other downloaded console games, exam sheets, environments and builds remain in the private local archive.
