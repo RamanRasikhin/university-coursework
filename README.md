@@ -1,37 +1,41 @@
 # University Coursework
 
-A curated selection of C++ and Python exercises from university classes. This is a coursework archive: implementations vary in maturity and are preserved as learning examples.
+Selected university projects and exercises in C++, Python and embedded C. The archive includes learning scaffolds and multiple unfinished variants; this index points to the more substantial examples and explains their limits.
 
-## Contents
+## Start here
 
-| Directory | Topics |
-| --- | --- |
-| `cpp/discrete-mathematics/` | Recursive Ackermann and Sudan functions, alternative implementations |
-| `python/1/`, `2/`, `3/`, `5/`, `6/` | Python lab notebooks and exercises |
-| `python/8/`, `9/` | PyQt interfaces and plotting examples |
-| `python/10/`, `11/` | Notebooks and numerical/threading/process examples |
-| `python/12/`, `14/`, `paradygmaty python/`, `zadanie domowe/` | Additional notebooks and programming-paradigm exercises |
+| Example | What it demonstrates | Verification |
+| --- | --- | --- |
+| [C++ Library Management](cpp/library-management/) | Classes, books/readers/employees, loans/reservations, CSV persistence and simulated dates | C++17 compile and CLI startup/exit |
+| [Sensor Sorting](cpp/sensor-sorting/) | Quicksort with three-level ordering and a weighted checksum | 60 generated cases compared with an independent sorting oracle |
+| [Mandelbrot](python/mandelbrot/) | Numerical arrays; serial/thread/process modes | Known complex points and cross-mode equality |
+| [Cellular Automata](python/cellular-automata/) | Conway's Life using convolution and periodic boundaries | Still-life and period-two oscillator checks |
+| [Numerical Modelling Notebook](python/numerical-modelling/) | Euler integration, Metropolis, percolation, Langton's ant and cellular simulations | Selected existing cells; not executed end to end |
+| [8051 Clock](embedded/8051-clock/) | Timer interrupts, display multiplexing and keyboard scanning | Source review only; original hardware unavailable |
 
-Original exercise filenames are retained. Notebook outputs have been cleared. Virtual environments, binaries, exam scans, copied example games and duplicate notebook checkpoints are excluded.
+## Smaller exercises and lab history
 
-## Python
+- [Discrete mathematics](cpp/discrete-mathematics/): Ackermann and Sudan recursion, including call-counting variants.
+- `python/1`, `2`, `3`, `5`, `6`: early Python and NumPy notebooks.
+- `python/8`, `9`: PyQt interfaces and plotting exercises.
+- `python/10`, `11`: networking/concurrency and original Mandelbrot variants.
+- `python/12`, `14`, `paradygmaty python`, `zadanie domowe`: iterators, generators and programming-paradigm exercises.
 
-Use a virtual environment and install only the packages required by the chosen exercise. Common dependencies found in this selection are listed in `requirements.txt`; they have not been version-pinned or validated as a single environment.
+Original lab filenames are retained for traceability. These folders are an archive of learning, not separately polished applications. Notebook outputs are cleared; environments, binaries, databases and exam scans are excluded.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m jupyter notebook
-```
+## Running the checked examples
 
-Run GUI scripts individually from a desktop Python environment. Some notebooks may require their original input data or additional packages.
-
-## C++
-
-Compile each source separately. For example, with a C++ compiler available:
+See each example's README for its requirements. Python demonstration checks:
 
 ```text
-g++ -std=c++17 cpp/discrete-mathematics/ackerman/Program_1_A_Rasikhin_Raman.cpp -o ackermann
+python -m pip install numpy scipy matplotlib
+python python/test_showcases.py
 ```
 
-Keep recursive-function inputs small: time and memory grow quickly. The examples retain their original input handling and integer limits.
+The top-level requirements file also includes optional packages used by older labs. GUI notebooks and scripts require a desktop environment, and some original exercises may need additional packages or data.
+
+## Provenance and cleanup
+
+[SELECTION.md](SELECTION.md) records the source paths, packaging fixes and excluded examples. The larger Python dungeon generator from the local archive was identified as an unchanged copy of Tiendil's tutorial and is not presented here as my own project. Uncertain C++ game derivatives are also excluded pending a reconstruction of the changes.
+
+C++ source packaging adds build instructions, standard headers and a signed empty-range bound. Python showcase packaging extracts reusable functions and fixes known escape-counting/process-startup issues; original lab variants are preserved. These maintenance changes are distinguished from the original coursework.

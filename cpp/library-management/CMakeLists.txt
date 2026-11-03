@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(library_management LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_executable(library_management src/main.cpp src/Czytelnik.cpp src/Date.cpp src/FileHandler.cpp src/globals.cpp src/KartaBiblioteczna.cpp src/Ksiazka.cpp src/Pracownik.cpp src/Rezerwacja.cpp src/Wypozyczenie.cpp)
